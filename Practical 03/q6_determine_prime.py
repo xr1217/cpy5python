@@ -17,15 +17,18 @@ def is_prime(n):
     return True
 
 #Print out first 1000 prime numbers in rows of 10
-a = 0
 i = 0
-while a < 1000:
+a = 0
+counter = 0
+running = True
+while running:
     if is_prime(a) == True:
-        print(str(a), end=" ")
+        print(str(a), end = " ")
         i = i + 1
         if i == 10:
-            print(end = "\n")
+            print()
             i = 0
+        counter = counter + 1
+        if counter == 1000:
+            running = False
     a = a + 1
-
-    
